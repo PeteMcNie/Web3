@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#pagetitle {
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.navbar {
+  background-color: darkgrey;
+}
+
+#back .navbar-nav .nav-item .nav-link {
+    color: white;
+    text-decoration: underline;
+    opacity: .75;
+    padding-bottom: .25em;
+}
+
+#pagebrief {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+
+.nav-tabs .nav-item .nav-link {
+    color: white;
+    margin-top: .25em;
+    margin-bottom: .25em;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background: transparent;
+  border-color: white;
+  border: 3px solid;
+}
+
+.nav .ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+  
+/* Form CSS BEGINS*/
+nav.fixed-top .form-control {
+  display: inline;
+  width: auto;
+}
+/* Form CSS ENDS */
+
+  p.note {
+    font-style: italic;  
+  }
+
+  p.general {
+      font-weight: bold;
+      text-decoration: underline;
+  }
+
+  .col.additional.links {
+      font-weight: bolder;
+     }
+
+p.important {
+  color: crimson;
+  font-weight: bolder;
+}
+
+.link-note {
+  font-style: italic;
+  opacity: 0.75;
+}
+
+.carousel {
+  width:640px;
+  height:360px;
+  margin: auto;
+}
+
+.black {
+  background: rgb(110, 98, 98);
+  text-decoration: white;
+}
+
+.blue {
+  background: rgb(142, 142, 212);
+}
+
+.green {
+  background-color: rgb(140, 212, 140);
+}
+
+.red {
+  background-color: rgb(223, 119, 119);
+}
+
+.pink {
+  background: pink;
+}
+
+#studylink {
+color: white;
+justify-content: center;
+font-weight: bolder;
+}
+
+#question {
+  color: rgb(162, 191, 255);
+  padding-top: 1em;
+}
+
+.reference {
+  font-style: italic;
+  color: rgb(250, 135, 150);
+}
+
+/* Manual Hierarchy CSS */
+#myTabContent {
+  color: white;
+  padding-top: .25em;
+}
+
+.tab-pane #opsint #scrollspy .navbar .navbar-brand {
+  color: white;             
+}
+
+.left-nav a {
+  color: white;
+}

@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Airbus Fleet Information</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resources/css/text.css">
+    
+
+<!-- apple logo picture BEGINS -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./resources/images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./resources/images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./resources/images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./resources/images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./resources/images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./resources/images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./resources/images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./resources/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./resources/images/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./resources/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./resources/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./resources/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./resources/images/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="./resources/images/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="./resources/images/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="./resources/images/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="./resources/images/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="./resources/images/mstile-310x310.png" />
+<!-- apple logo picture ENDS-->
+</head>
+
+
+<body>
+    <!-- Nav section-->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="197">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav nav-fill w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="manualhierarchy.html">
+                        Manual Hierarchy
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link  dropdown-toggle" href="other.html" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Study Material
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="sspq.html">Standards Selection Panel Questions</a>
+                            <a class="dropdown-item" href="...">Route and Aerodrome Course Questions</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="...">
+                        About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+      
+
+            <form action="action_page.php">
+                <input class="form-control mr-sm-2 text" type="search" placeholder="Search" aria-label="Search"
+                    name="search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+        
+
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+    </div>
+
+    <div class="container-fluid" style="background-image: url(./resources/images/flightdecksunset-smaller.jpeg); background-color: rgba(87, 87, 87); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; background-position: 0px 50px;">
+        <div class="row">
+            <div class="col-12" style="background-color: rgba(0,0,0, 0.4); overflow: auto">
+                <h1 id="pagetitle">Standards Selection Panel Study</h1>
+            </div>
+        </div>
+        <div class="row" id="back">
+            <div class="col-12" style="background-color: rgba(0,0,0, 0.4);">
+                <ul class="navbar-nav nav-fill w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="other.html">back</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+
+<!-- Bootstraps example -->
+        <ul class="nav nav-tabs nav-fill w-100" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="home" aria-selected="true">Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="performance-tab" data-toggle="tab" href="#performance" role="tab" aria-controls="profile" aria-selected="false">Performance/Aircraft</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="preflight-tab" data-toggle="tab" href="#preflight" role="tab" aria-controls="contact" aria-selected="false">Pre-flight</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="departure-tab" data-toggle="tab" href="#departure" role="tab" aria-controls="contact" aria-selected="false">Departure</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="cruise-tab" data-toggle="tab" href="#cruise" role="tab" aria-controls="contact" aria-selected="false">Cruise</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#arrival" role="tab" aria-controls="contact" aria-selected="false">Arrival</a>
+            </li>
+        </ul>
+
+        <!-- Admin Questions BEGINS -->
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>Which of the CAA Parts are relevant to Air New Zealand?</h5>
+                            <ul>
+                                <li>Part 12	Accidents, Incidents and Statistics</li>
+                                <li>Part 43 General Maintenance Rules</li>
+                                <li>Part 61	Pilot Licences and Ratings</li>
+                                <li>Part 67	Medical Standards and Certification</li>
+                                <li>Part 91	General Operating and Flight Rules</li>
+                                <li>Part 92	Carriage of Dangerous Goods</li>
+                                <li>Part 119 Air Operator Certification</li>
+                                <li>Part 121 Air Operations Large Aeroplanes</li>
+                                <li>Part 125 Air Operations Medium Aeroplanes</li>
+                                <li>Part 135 Air Operations Helicopters and Small Aeroplanes</li>
+                                <li>Part 141 Aviation Training Organisations Certification</li>
+                            </ul>
+                            <p class="reference">CAA Website</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                <div class="col" id="question">
+                        <h5>Pilots must not do what in regard to SOP’s?</h5>
+                            <p>Use of non-standard procedures during normal operations is prohibited. No flight crew, including instructors and management crew, may experiment on any service flight with any change to procedures without the authority of COIS. Authority for such experiments will be given in writing by issue of a SUPP 1 so that all associated with the flight will be aware of procedures involved.</p>
+                            <p class="reference">SOP 1.1.1 Use of Non-standard Procedures</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                            <h5>When is the ISM/FSM responsible for the aircraft?</h5>
+                                <p>When passengers board the aircraft the responsibility for their safety transfers to the crew.</p>
+                                <p class="reference">CSM 2.30.1</p>
+                                <p>FA - A crew member other than a flight crew member responsible to the PIC for the maintenance of order and discipline in the passenger compartments and for providing assistance to passengers in the event of sickness, accident and emergency.</p>
+                                <p class="reference">CSM 1.3.6</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>When is the Captain responsible for the aircraft?</h5>
+                                    <p>The Captain is responsible for the aircraft on the ground, from the time the Captain boards the aircraft prior to the flight until the Captain vacates the aircraft after the flight is completed.</p>
+                                    <p class="reference">Fleet Procedures Manual – 1.3.3 Captain</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>What is the Transponder code for hi-jacking?</h5>
+                                    <p>7500</p>
+                                    <p class="reference">Jepps</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>What are the acceptable forms of Clock Setting?</h5>
+                                    <p>Acceptable sources of UTC include:</p>
+                                    <ul>
+                                        <li>WWV/WWVH (WWV = radio call sign for the National Institute of Standards and Technology Time and Frequency short wave radio station (Colorado)) (WWVH = as above except Hawaii is the station)</li>
+                                        <li>GPS (corrected to UTC)</li>
+                                        <li>BBC</li>
+                                    </ul>
+                                    <p class="reference">SOP 3.1.4 Clock/UTC Display</p>
+                                    <p>Clock notes:</p>
+                                    <ol>
+                                        <li>If the date is incorrect, set the date manually then set and keep the clock mode to internal (INT) mode for the whole flight.</li>
+                                        <li>To comply with the time precision requirement (+/-1s UTC) for ATC datalink communication, flight crew must either:</li>
+                                        <ul>
+                                            <li>Use the clock in GPS mode, or</li>
+                                            <li>Use the clock in INT mode and synchronize the clock with the GPS at least one time per day. This synchronization ensures that the UTC time drift is below +/-1s UTC.</li>
+                                        </ul>
+                                    </ol>
+                                    <p class="reference">FCOM PRO-NOR-SOP CTR Instrument Panel</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>What do the different coloured C/Bs represent? </h5>
+                                    <ul>
+                                        <li>Black Cap – CB not monitored by ECAM</li>
+                                        <li>Blue Cap – CB to be pulled by flight crew during a checklist (QRH) procedure</li>
+                                        <li>Green Cap – CB monitored by ECAM</li>
+                                        <li>Red Bush – CB only to be pulled during maintenance using special tools. Eg WTB</li>
+                                        <li>White Clip – CB that is permanently pulled</li>
+                                        <li>White Collar – CB that is pulled to deactivate a system under an MEL</li>
+                                        <li>Pink Collar – Electrical CB deactivated during maintenance, should be removed before flight</li>
+                                        <li>Red Collar – DO NOT OPERATE (both CB and aircraft)</li>
+                                    </ul>
+                                    <p>Only maintenance can install and removed collars.</p>
+                                    <p class="reference">SOP 2.1.9 Circuit-breakers</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>When can you reset CB’s? </h5>
+                                    <p>Deliberate shutdown of serviceable equipment by opening of CBs is not permitted, except as required by checklist procedures.</p>
+                                    <p>Flight crew reset of tripped fuel-pump and fuel-pump-control CBs is prohibited (both on the ground and during flight).</p>
+                                    <p>Reset of any other tripped CB is not recommended unless, in the judgement of the Captain, the situation resulting from the CB trip has a significant adverse effect on safety. These other tripped CBs may be reset once, after a short cooling period (approx 2 minutes). A ground reset of a tripped CB by the flight crew should only be accomplished after Engineering has determined that it is safe to reset the CB.</p>
+                                    <p>Flight crew must raise a Technical Log/eLog entry any time they reset a CB.</p>
+                                    <p class="reference">SOP 2.1.8 Resetting of Tripped CBs</p>
+                                    <p>In-flight Reset – The flight crew can attempt a system reset only when:</p>
+                                    <ul>
+                                        <li>An ECAM/OEB/FCOM/QRH procedure requests them to reset the system, or</li>
+                                        <li>The System Reset Table permits (in FCOM and QRH)</li>
+                                    </ul>
+                                    <p class="reference">FCOM PRO-ABN-ABN-RESET</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>Definition of dispatch?</h5>
+                                    <p>Despatch – After engine start and ground crew dispatched.</p>
+                                    <p class="reference">DDG MI 00 07 Company Definitions (Master)</p>
+                                    <p class="reference">RG 1 OPS.DOCS.34 Despatch Guidance (Reference to DDG)</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>Can the PIC refuse carriage of cargo? </h5>
+                                    <p>DG carriage is at the behest of the PIC who may refuse carriage.</p>
+                                    <p class="reference">RG 1 GEN.DG.1</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>What are the critical phases of flight?</h5>
+                                    <p>The critical phases of flight are defined as:</p>
+                                    <ul>
+                                        <li>all operations from off blocks to 10,000 ft</li>
+                                        <li>when within 1,000 ft of any level off or transition</li>
+                                        <li>approaching/commencing descent</li>
+                                        <li>from 10,000 ft to on blocks</li>
+                                    </ul>
+                                    <p>No flight crew member shall perform any duty during a critical phase of flight except those duties required for the safe operation of the aircraft.</p>
+                                    <p>Paperwork, PAs and non-operational conversation should be kept to a minimum.</p>
+                                    <p class="reference"><a href="Critical Phase of Flight.html">SOP 2.1.2 Critical Phases of Flight</a></p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>When must you wear safety harness? </h5>
+                                    <p>Flight crew are required to have their seat belts fastened when occupying the appropriate flight-deck seat between engine start and shutdown, or when the aircraft is under tow.</p>
+                                    <p>It is recommended that the full safety harness is worn at all times during flight.</p>
+                                    <p>Full safety harness <strong>must</strong> be worn:</p>
+                                    <ul>
+                                        <li>during take-off and from at least five minutes prior to landing (transition on descent is a good indicator)</li>
+                                        <li>when the aircraft is flying at less than 1,000 ft AGL</li>
+                                        <li>during an instrument approach for landing</li>
+                                        <li>during turbulent conditions, or when turbulence is expected</li>
+                                        <li>in an emergency</li>
+                                        <li>when the aircraft is taxiing (except any operating crew members occurpying an observer's seat)</li>
+                                        <li><strong>when either pilot seat is unoccupied</strong></li>
+                                    </ul>
+                                    <p class="reference"><a href="SOP Flight Deck Seating.html">SOP 2.1.7 Use of Seat Harness</a></p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>Jet Upset definition?</h5>
+                                    <p>An aircraft upset is an undesired aircraft state characterised by unintentional divergences from parameters normally experienced during operations. An aircraft upset may involve pitch and/or bank angle divergences and may lead to inappropriate airspeeds for the conditions. An upset condition exists any time an aircraft diverges from what the flight crew is intending to do. Deviations from the desired aircraft state will become larger until the flight crew takes action to stop the divergence. Return to the desired aircraft state can be achieved through natural aircraft reaction to accelerations, auto-flight system response or flight crew intervention. </p>
+                                    <p class="reference">FCTM PR-AEP-MISC-Upset Prevention and Recovery</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>Actions in the event of an RA? </h5>
+                                    <p>A TCAS RA shall always be complied with, unless following the RA would jeopardise the safe operation of the aircraft.</p>
+                                    <p class="reference">SOP 4.3.1 Non-normal Procedures - TCAS</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>What is the minimum amount of fuel at destination when no alternate is planned for? </h5>
+                                    <p>Domestic Operations – when the destination does not require an alternate:</p>
+                                    <ul>
+                                        <li>Plan the closest manned usable alternate for which a METAR or pilot report is available, or 80 minutes holding, whichever requires the least fuel.</li>
+                                    </ul>
+                                    <p class="reference">RG 1 FLP.320.1 A320 Flight Planning</p>
+                                    <p>Fuel Requirements – Alternate Aerodrome not required</p>
+                                    <ul>
+                                        <li>e. sufficient fuel to fly for 80 minutes at holding speed at 1500ft above the destination.</li>
+                                    </ul>
+                                    <p class="reference">FCOM PER-FLP-FPR-DCF</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>What is the minimum arrival fuel at destination?</h5>
+                                    <p>The minimum flight plan fuel at destination shall not be less than the equivalent of 60 minutes holding at 1500ft (at the destination).</p>
+                                    <p class="reference">RG 1 FPL.4 Minimum Fuel at Destination</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>What is Emergency talk?</h5>
+                                    <p>Flight crew who deem a Captain’s actions to be extremely unsafe, and can foresee the potential for an incident or accident, must be able to influence the outcome. Emergency talk is the formal procedure used to achieve this. Ultimately, the use of a key phrase obliges the Captain to reconsider the course of action.</p>
+                                    <ul>
+                                        <li>Enquiry – What is your plan from here? How will we manage our height/speed from here?</li>
+                                        <li>Advocacy – I think we should ask for extra track miles. Max airspeed below 5000ft is 250kts.</li>
+                                        <li>Assertion – Turn on to heading 050. Reduce speed now. </li>
+                                        <li>“Captain, you must listen” – Submit OSR if phrase has been used</li>
+                                    </ul>
+                                    <p class="reference">SOP 2.1.13 Emergency Talk</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>When sighting volcanic ash what type of report must be submitted?</h5>
+                                    <p>Flight crew observing volcanic activity must file a Volcanic Activity Report. Forms are available in the Flight Library. This information in section 1, items 1 to 8, should be passed to the appropriate ATS unit. The remainder may be filled out as workload permits, and returned along with the rest of the flight documentation. Refer to Jeppesen ATC Section.</p>
+                                    <p class="reference">SOP 3.8.5 Volcanic Activity Report</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>When will dispatch plan you with B-C depressurised fuel?</h5>
+                                    <p>For flights by twin engine aircraft to a destination which at the flight planning stage is forecast to be closed at the ETA, fuel is provided for flight to the alternate at 9000ft or 10000ft in accordance with the quadrantal cruising table requirements. Fuel will be calculated as per normal ETPD requirements for the aircraft type.</p>
+                                    <p>Note: 1. For cases where the destination is below landing minima (closed), another airport is selected for EDTO purposes. This will be the nominated destination alternate (more in FCOM).</p>
+                                    <p class="reference">FCOM PER-FLP-FPR-CFP-Flight Planning to a Closed Destination</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>LAND ASAP Red or LAND ASAP Amber meaning? </h5>
+                                    <p>LAND ASAP (Red) = land as soon as possible at the nearest airport at which a safe landing can be made. Note: Red LAND ASAP information is applicable to a time-critical situation.</p>
+                                    <p>LAND ASAP (Amber) = consider landing at the nearest suitable airport.</p>
+                                    <p class="reference">FTCM AOP-30-10-LAND ASAP Definition</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                                <h5>After a positive bomb threat assessment, what is the LRBL for you fleet?</h5>
+                                    <p>Moving the device, select the Lease Risk Bomb Location (LRBL).</p>
+                                    <ol>
+                                        <li>The aft most door on the aircraft’s right side.</li>
+                                    </ol>
+                                    <p class="reference">CSM 9.3.6 Bomb Threat In-flight</p>
+                                    <p>Least Risk Bomb Location (LRBL) is the centre of the RH aft cabin door.</p>
+                                    <p class="reference">FCOM PRO-ABN-MISC Bomb on Board/QRH</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                                <h5>When is an AIREP required?</h5>
+                                    <p>Position Reports – AIREP</p>
+                                    <p>5.1 Section 3 Requirements</p>
+                                    <p>5.1.1 AIREP meteorological information reporting points are indicated by the following symbols on enroute and area charts: (Picture of an M with a cirlce around it)</p>
+                                    <p>5.1.2 Meteorological information, if required, is provided by AMDAR equipped aircraft at these reporting points by the inclusion of AIREP Section 3. Additionally, whenever conditions experienced are significantly above or below those forecast, AIREP including Section 3 should be submitted by ADMAR equipped aircraft.</p>
+                                    <p>5.2 AIREP Special</p>
+                                    <p>5.2.1 A PIC should make a special AIREP report when requested, or as soon as practicable after encountering any SIGMET phenomenon or any other meteorological condition which is likely to affect the safety or markedly affect the efficiency of the aircraft.</p>
+                                    <p>5.2.3 In the climb-out and approach phases, a PIC must report meteorological conditions, not previously advised, which are likely to affect safety of aircraft operations.</p>
+                                    <p class="reference">Jeppesen – Pacific Airway Manual - Meteorology Data – Pacific, Meteorology Reports and Advisories</p>
+                                    <p>Aircraft Weather Reports 1.4.2.</p>
+                                    <p>In addition to requirements for special AIREP reports concerning meteorological conditions likely to affect the safety of other aircraft, PIC of flights in areas when ground meteorological reports are scanty, are encouraged to report observations of meteorological conditions which they consider will assist in the provision of meteorological services.</p>
+                                    <p class="reference">Jeppesen – Pacific Airway Manual - Meteorology Data – Pacific – Meteorology Reports and Advisories – Meteorological Reports</p>
+                                    <p>When on ATS routes, aircraft must transmit section 1 of the AIREP at compulsory reporting points, designated compulsory MET reporting points and waypoints. Section 3 of the AIREP is required at compulsory MET reporting points by aircraft using CPDLC only.</p>
+                                    <p>When on uncharted routes, aircraft must transmit section 1 of the AIREP at all fixes defining the route.</p>
+                                    <p class="reference">Jeppesen – Pacific Airway Manual - State Rules and Procedures – Pacific – New Zealand and Pac Is, Rules and Procedures – Position Reporting</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Admin Questions ENDS -->
+
+
+            <!-- Performance/Aircraft Questions BEGINS -->
+            <div class="tab-pane fade" id="performance" role="tabpanel" aria-labelledby="performance-tab">
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What is the difference between MRC and LRC?</h5>
+                            <p>MRC is the most distance for the least amount of fuel burnt. With MRC you do not care how long it takes to fly the most distance. This means operating the aircraft at the best lift to drag ratio. As weight reduces during flight less lift will be required to balance the reducing weight component. MRC therefore reduces as the aircraft gets lighter.</p>
+                            <p>LRC burns 1% extra fuel but this gives you a 5% increase in airspeed.</p>
+                            <p class="reference">Getting to grips with Airbus 2.1.1 and 2.1.2</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What is the definition of contamination?</h5>
+                            <p>A runway is considered to be contaminated when more than 25% of the runway surface area (whether in isolated areas or not) within the required length and width being used is covered by any of the following:</p>
+                            <ul>
+                                <li>Standing water or slush more than 3mm in depth</li>
+                                <li>Wet snow more than 3mm in depth</li>
+                                <li>Dry snow more than 3mm in depth</li>
+                                <li>Any depth of compacted snow or ice, including wet ice</li>
+                            </ul>
+                            <p class="reference">FCOM PER-TOF-CTA-40-30 Runway Contamination</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What do the colours of emergency procedure titles in the QRH and FCOM represent? </h5>
+                            <ul>
+                                <li>QRH/FCOM – with a white background only is an ECAM Amber caution</li>
+                                <li>QRH/FCOM - with white background and red on each side is an ECAM Red warning </li>
+                                <li>QRH/FCOM – with grey background is an abnormal procedure with no ECAM</li>
+                                <li>QRH/FCOM – with grey background and red on each side is an emergency procedure with no ECAM</li>
+                            </ul>
+                            <p class="reference">FCOM PRO-ABN-ABN-00-Introduction</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What are the phases of flight for flight phase inhibition?</h5>
+                            <ul>
+                                <li>Phase 1: 	ELEC PWR  	1st ENG STARTED</li>
+                                <li>Phase 2: 	1st ENG STARTED	1st ENG T/O PWR</li>
+                                <li>Phase 3:	1st ENG T/O PWR	80KTs on T/O</li>
+                                <li>Phase 4:	80KTs on T/O	LIFTOFF	</li>
+                                <li>Phase 5:	LIFTOFF	1500FT</li>
+                                <li>Phase 6:	1500FT	800FT</li>
+                                <li>Phase 7:	800FT	TOUCHDOWN	</li>
+                                <li>Phase 8:	TOUCHDOWN	80KTs</li>
+                                <li>Phase 9:	80KTs	2nd ENG SHUTDOWN</li>
+                                <li>Phase 10:	2nd ENG SHUTDOWN	5 MINS AFTER SHUTDOWN</li>
+                            </ul>
+                            <p class="reference">FCOM PRO-ABN-ABN-00-Introduction</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>When can you carry out a flex take-off?</h5>
+                            <p>Reduced thrust takeoffs may be made provided:</p>
+                            <ol>
+                                <li>Reduced thrust flex temperature data is shown on TODC output.</li>
+                                <li>The ambient temperature is lower than the flex temperature for the actual brake release weight.</li>
+                                <li>No significant windshear is suspected to exist in the takeoff path.</li>
+                                <li>There are no MEL items which preclude reduced thrust takeoffs.</li>
+                            </ol>
+                            <p>A reduced thrust takeoff is only permitted when using TODC output produced for the runway is use. Reduced thrust takeoff is NOT permitted when:</p>
+                            <ul>
+                                <li>Taking off towards WIP in which men or machinery are on the runway or strip, or</li>
+                                <li>Using General Data (TODC inoperative), or</li>
+                                <li>Using airport GEND (in PER-TOF-TOD-14-10) in the TODC, or</li>
+                                <li>Using any paper individual runway table</li>
+                            </ul>
+                            <p>TOGA thrust must be used in the above cases.</p>
+                            <p class="important">Note: If in any doubt about the suitability of the conditions use TOGA thrust.</p>
+                            <p class="reference">FCOM PER-TOF-RTT</p>
+                            <p>Assumed temperature reduced thrust take-offs are not permitted towards runway WIP in which personnel or equipment are within the runway strip.</p>
+                            <p class="reference">SOP 3.1.6 Take-off Performance</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Performance/Aircraft Questions ENDS -->
+
+            <!-- Pre-flight Questions BEGINS -->
+            <div class="tab-pane fade" id="preflight" role="tabpanel" aria-labelledby="preflight-tab">
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What are the weather requirements for destination alternate in-flight?</h5>
+                            <p>Above landing minima</p>
+                            <p class="reference">RG 1 OPS.36 Application of Alternate Meteorological Minima</p>
+                            <p class="reference">RG 1 OPS.25 Instrument Approach Requirements</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What are the Departure alternate requirements?</h5>
+                            <p>You must not take-off from an aerodrome if the meteorological conditions are below minimum for landing or a return is not possible due operational factors, unless:</p>
+                            <ul>
+                                <li>Twin engine aircraft, an alternate within 60 minutes flying time from the departure aerodrome, in still air, at the OEI cruising speed is available, or</li>
+                                <li>Aircraft on EDTO sectors, if an alternate meeting the above criteria is not available, an alternate shall be within the maximum approved EDTO distance from the departure aerodrome</li>
+                            </ul>
+                            <p class="reference">RG 1 OPS.10 Departure Alternate Requirements</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What is the flight plan MSA protection?</h5>
+                            <p>Safety height is based on Jeppesen Grid MORA and provides 1000ft clearance above terrain up to 5000ft and 2000ft clearance above terrain of 5001ft above Mean Sea Level or greater. An area 50nm either side of the track and the 50nm semi-circle around each end of the sector is searched.</p>
+                            <p class="reference">FCOM PER-FLP-FPR-CFP Computer Flight Planning</p>
+                            <p class="reference">RG 1 NAV.A320.2</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What is the altimeters tolerance? </h5>
+                            <p>The maximum difference between altitude indications on the PFDs is 20ft.</p>
+                            <p>The maximum difference between altitude indications on the ISIS and PFDs is 100ft.</p>
+                            <p>The maximum difference between altitude indications on the mechanical standby altimeter and PFDs is 300ft.</p>
+                            <p class="reference">FCOM-PRO-NOR-SOP-Cockpit Preparation </p>
+                            <p>RNP AR Approach – altimeters must be within 75ft at transition level.</p>
+                            <p class="reference">FCOM PRO-NOR-SOP-Decent/ FCOM PRO-NOR-SOP-Approach-Approach using Final Approach RNP</p>
+                            <p>RNAV (GNSS) Approach – altimeters must be within 100ft at 10,000ft.</p>
+                            <p class="reference">FCOM PRO-NOR-SOP-Approach-Approach using Final Approach</p>
+                            <p>RVSM - altitudes between altimeters and airport elevation must be less than 75ft.</p>
+                            <p class="reference">FCOM PRO-SPO-RVSM</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>CWC icing conditions definition? </h5>
+                            <p>Icing conditions exists on the ground when the OAT is +10˚C or below and any of the following is present:</p>
+                            <ul>
+                                <li>Fog or mist with a visibility of 1900M or less, or</li>
+                                <li>Rain, drizzle, snow, sleet or ice crystals falling, or</li>
+                                <li>Standing water, slush, snow or ice is present on the ramp, apron, taxiways or runway surfaces, or</li>
+                                <li>Frost conditions exists</li>
+                            </ul>
+                            <p class="reference">QRH CW.01A Definitions</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What are the requirements for refuelling with passengers onboard?</h5>
+                            <p>FA1 or the DFSA must ensure that:</p>
+                            <ol>
+                                <li>All boarding procedures are adhered to.</li>
+                                <li>The basic cabin crew complement is available for boarding.</li>
+                                <li>A crew member is present in each compartment occupied by a passenger.</li>
+                                <li>A crew member is stationed at any door that has an airbridge or steps outside. These doors must be open except in inclement weather, where the doors may be closed but not locked.</li>
+                                <li>Aisles and access to all doors/exits remain unobstructed and clearly visible.</li>
+                                <li>All cabin curtains are fastened open.</li>
+                                <li>The no-smoking signs are illuminated in all cabin zones.</li>
+                                <li>FA1 must check the status of FSB sign. If the FSB sign is OFF, deliver refuelling PA.</li>
+                                <li>At main door closing time, FA1 must check FSB sign. If OFF inform PIC.</li>
+                                <li>FA1 or DSFA must ensure that the area outside a second exit remains clear.</li>
+                            </ol>
+                            <p class="note">Note: FSB = Fasten Seat Belt (sign)</p>
+                            <p class="reference">CSM 2.26.1 Fuelling Operations</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pre-flight Questions ENDS -->
+
+            <!-- Departure Questions BEGINS -->
+            <div class="tab-pane fade" id="departure" role="tabpanel" aria-labelledby="departure-tab">
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>Pre-departure icing check may be carried out by?</h5>
+                            <p>Certifying engineer, authorised person or PIC.</p>
+                            <p class="reference">QRH CW.02A – Pre-departure Icing Check</p>
+                            <p>The certifying engineer or authorised person is responsible for inspecting the aircraft for the need to de-ice, and will initiate de-icing/anti-icing if required. Once de-icing/anti-icing treatment has been applied, the <strong>certifying engineer or authorised person</strong> is responsible for completing a pre-departure icing check.</p>
+                            <p class="reference">SOP 3.8.1 Engineering/Ground Crew Responsibilities</p>
+                            <p>The final responsibility for de-icing/anti-icing rests with the PIC.</p>
+                            <p class="reference">SOP 3.8.1 PIC Responsibilities</p>
+                            <a href="manualhierarchy.html">See manual Hierarchy</a>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>Pre-takeoff Icing check is carried out by?</h5>
+                            <p>Pilots from the flight deck and take-off must be conducted within 5 minutes of the completion of the Pre-takeoff icing check and the HOT. (Hold over time). If the HOT as been exceeded or the aircraft is in freezing rain, a more detailed inspection from the cabin is required.</p>
+                            <p class="reference">QRH CW.03A</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>When does responsiblity for de-icing/anti-icing transfer from the certifying engineer or authorised person to the PIC?</h5>
+                            <p>Once the aircraft starts moving under its own power.</p>
+                            <p class="reference">SOP 3.8.2 Transfer of Responsibility</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>If an aircraft has been anti-iced but the holdover time has expired with icing conditions present, can the aircraft have another layer of anti-ice applied?</h5>
+                            <p>Yes but only if the aircraft is firstly de-iced before a new layer of anti-icing fluid is applied.</p>
+                            <p class="reference">QRH CW.05 Pre-Takeoff Considerations</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>Are there any restrictions on an FO, with over 200 hours and 150 sectors, operating into a Cat A airport?</h5>
+                        <h5>What are the restrictions on FO command practise?</h5>
+                            <p>The PIC has the final decision on if command practise can be attained. The following requirements apply. The FO must have completed 200 hours on type or 150 sectors before they can complete the take-off and landing, unless;</p>
+                            <ul>
+                                <li>The PIC is a standards Captain, <strong>or</strong></li>
+                                <li>The Aerodrome is A, B or C Category, <strong>and</strong></li>
+                                <li>Weather is above alternate minima, <strong>and</strong></li>
+                                <li>Runway is not contaminated, <strong>and</strong></li>
+                                <li>Crosswind does not exceed 50% of flight manual limit, <strong>and</strong></li>
+                                <li>Windshear has not been reported in the vicinity of the aerodrome</li>
+                            </ul>
+                            <p>Unless command TRAINING is being carried out, the PIC must be PF when:</p>
+                            <ul>
+                                <li>Take-off or approach visibility is less than 800m / RVR 550m</li>
+                                <li>On Cat II/III approaches</li>
+                                <li>Using autoland</li>
+                            </ul>
+                            <p class="reference">SOP 2.1.5 Command Practise</p>
+                            <p class="reference">SOP 2.1.4 Allocation of Flight-Deck Duties</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>ECAM after dispatch actions? </h5>
+                            <p>Follow any appropriate ECAM, ORH action, the DDG/MEL shall be consulted. If the DDG/MEL conflicts with the QRH, the QRH takes precedence.</p>
+                            <p>Any decision to continue the flight after dispatch must be subject to pilot judgement and good airmanship.</p>
+                            <p class="reference">SOP 4.1.1 Non-Normal Procedures</p>
+                            <p>MEL Strategy – After Dispatch and Prior to Take-off</p>
+                            <ol>
+                                <li>Complete ECAM to Status Page (go straight to 2 if no ECAM displayed).</li>
+                                <li>Consider computer resets/OEBs</li>
+                                <li>Complete ECAM</li>
+                                <li>Review FCOM (PRO ABN & PRO SUP)</li>
+                                <li>Consult MEL (MEL Entries) and contact Maintenance Operations
+                                    <ul>
+                                        <li>No dispatch in MEL = return to blocks</li>
+                                        <li>MEL with (m) or [m] action = contact maintenance operations for advice</li>
+                                        <li>MEL with (o) or [c] action = unless operation requires prevent, GO</li>
+                                    </ul>
+                                </li>
+                                <li>No MEL restrictions = GO after considering onward return sectors, performance and flight sector limitations. Contact maintenance operations for advice.</li>
+                            </ol>
+                            <p class="reference">MEL MEL Entries 00 - Introduction</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>Taxing requirements? </h5>
+                            <p>Taxi speed when the aircraft weight is higher than 76,000kgs, do not exceed 20kts during a turn.</p>
+                            <p class="reference">FCOM LIM-AG-SPD</p>
+                            <p>When taxiing at high gross weight, or for a long distance, speed should be restricted to 20kts or less. When turning on a wet runway, or when making a sharp turn under any conditions, speed should not exceed 10kts. Taxi speed shall never exceed 30kts.</p>
+                            <p class="reference">SOP 3.3.1 Taxiing Speed</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>Airspeed cross check actions on takeoff?</h5>
+                            <p>Below 80kts – check that the takeoff EPR has reached the EPR rating limit, before the aircraft reaches 80kts. Check EGT</p>
+                            <p>Reaching 100kts –  ONE HUNDRED KNOTS – Announced by PM. </p>
+                            <ul>
+                                <li>PF crosschecks and confirms the speed indicated on the PFD.</li>
+                                <li>Below 100kts the Captain may decide to abort the takeoff, depending on the circumstances</li>
+                                <li>Above 100kts, rejecting the takeoff is a more serious matter</li>
+                            </ul>
+                            <p class="reference">FCOM PRO-NOR-SOP Takeoff</p>
+                            <p>If there is a discrepancy of 10kts or greater, re-check. If the difference still exists, a rejected take-off should be considered.</p>
+                            <p class="reference">SOP 2.8.1 Takeoff Policy</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>LMO, under what conditions can the FO take-off?</h5>
+                            <p>The following restrictions apply (on allocation of flight deck duties):</p>
+                            <ul>
+                                <li>Unless command training is being carried out, the PIC is to be PF when:</li>
+                                <ul>
+                                    <li>On take-off the visibility is less than 800m/RVR550m.</li>
+                                </ul>
+                            </ul>
+                            <p class="reference">SOP 2.1.4 Allocation of Flight Deck Duties</p>
+                            <p>Low Minima Operations – conditions: visibility is less than 800m (RVR550m).</p>
+                            <p>Take-off Requirements – crew: PIC must be PF, except when command training is being conducted.</p>
+                            <p class="reference">QRH LMO.01A</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>Actions in the event of cabin not ready on take-off? </h5>
+                            <p>If cabin clearance is not received by flight crew at the appropriate time before take-off, they will call FA1 and challenge “Cabin Ready?”</p>
+                            <p class="reference">CSM 2.9.1 Cabin Standard Operating Procedures</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Departure Questions ENDS -->
+
+            <!-- Cruise Questions BEGINS -->
+            <div class="tab-pane fade" id="cruise" role="tabpanel" aria-labelledby="cruise-tab">
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What are the RVSM airspace Requirements?</h5>
+                            <p>Auto-pilot must be engaged for cruise and flight level changes. During level changes and capturing altitude do not exceed or go below the assigned altitude by more than 150ft.</p>
+                            <p>Equipment required:</p>
+                            <ul>
+                                <li>2 ADRs and 2 DMCs</li>
+                                <li>1 Transponder</li>
+                                <li>1 AP (1 automatic altitude keeping device)</li>
+                                <li>1 FCU channel</li>
+                                <li>2 PFD functions (2 primary altimeter systems)</li>
+                                <li>1 FWC (1 altitude alert system)</li>
+                            </ul>
+                            <p class="reference">FCOM SPO-RVSM/ (Jepp reqs in brackets)</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                <div class="col" id="question">
+                        <h5>What are the RVSM airspace altimeter requirements? </h5>
+                            <ul>
+                                <li>Two primary aircraft altimeter systems must be within 200ft of each other.</li>
+                                <li>One automatic altitude keeping device.</li>
+                                <li>One altitude alerting device.</li>
+                            </ul>
+                            <p class="reference">Jeppesen</p>
+                            <p>Must be cross-checked every hour.</p>
+                            <p class="reference">FCOM PRO-SPO-50-RVSM</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>At or above what flight level does the pilot need to use demand oxygen if the other pilot leaves their crew duty station?</h5>
+                            <p>Anytime the aircraft is operated above FL350 up to and including FL430, two pilots must be at their pilot stations and each pilot must have <strong>access</strong> to an oxygen mask that can be placed on the face and supplying oxygen within 5 seconds except when one pilot briefly leaves the flight deck. With one pilot out of the flight deck the following conditions must be met:</p>
+                            <ul>
+                                <li>The pilot remaining on the flight deck must focus on flying the aircraft and avoid any other activity, except for essential aviation related tasks, and</li>
+                                <li>The pilot remaining in the flight deck must have access to an oxygen mask that can be placed on the face and supplying oxygen within 5 seconds.</li>
+                            </ul>
+                            <p class="reference">SOP 2.1.8</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>Engine failure past the EDTO entry which type of airport must you continue to?</h5>
+                            <p>In-flight Contingency. In the event of an in-flight shutdown of an engine, the pilot should fly to and land, in the first instance, at the nearest EDTO alternate aerodrome (in terms of flying time) at which a safe landing can be made.</p>
+                            <p class="important">Note: This is NOT RESTRICTED to the flight planned EDTO en-route alternates, and any EDTO alternate aerodromes, departure and destination airports may be considered.</p>
+                            <p>In the event of a failure of a system or system element, for which no suitable redundancy exists, the pilot should fly to and land at, the nearest EDTO alternate aerodrome. In this context, primary systems are: electrical, hydraulics and pneumatics. It may be reasonable to continue flight to a more distant aerodrome using the APU to provide backup services. However, if APU operation is required at any time prior to a limiting ETP, sufficient fuel must be available to ensure that the remaining in-flight requirements are not compromised.</p>
+                            <p>In all cases, the PIC has the authority to act in the most prudent manner when assessing the situation at the time, considering all factors of:</p>
+                            <ul>
+                                <li>Aircraft serviceability</li>
+                                <li>Aerodrome suitability</li>
+                                <li>Weather conditions</li>
+                            </ul>
+                            <p>In-flight, type specific QRH/FCOM will prescribe those failures, or combination of failures, for which a diversion is required.</p>
+                            <p class="reference">RG 1 OPS.24/5 Extended Diversion Time Operations (EDTO) – Considerations</p>
+                            <ul>
+                                <li>Electrical Generation and Hydraulic Systems require diversion if APU does not start or the APU GEN fails.</li>
+                                <li>Fuel System failures which result in a lower level being flown and gravity feeding making some fuel unusable. </li>
+                                <li>Issues affecting the blue hydraulic system may also require a divert.</li>
+                            </ul>
+                            <p class="reference">FCOM PRO-SPO-EDTO-Diversion Decision Making</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What requires a diversion?</h5>
+                            <p>Non-normal procedures, when appropriate, contain information that crews need to consider when making decisions concerning the continuation or termination of the flight. While such decisions can only be made by the PIC after consideration of all relevant factors, there are some conditions that always require a landing at the nearest (in time) suitable airport at which a safe landing can be made. These factors include, but are not limited to:</p>
+                            <ul>
+                                <li>Failures leading to LAND ASAP on the ECAM/QRH</li>
+                                <li>Engine fire or failure</li>
+                                <li>Wheel-well fire</li>
+                                <li>Fuselage fire</li>
+                                <li>Cargo fire</li>
+                                <li>Cabin smoke or fire that cannot be immediately and positively determined to be eliminated or extinguished</li>
+                                <li>One hydraulic system remaining</li>
+                                <li>-On AC power source remaining</li>
+                                <li>Any other condition determined by the crew to present a significant adverse effect on the safety if the flight is continued</li>
+                                <li>Where regulations require an early landing</li>
+                            </ul>
+                            <p>In each case, it is the responsibility of the PIC to assess the conditions and execute sound judgement to determine the safest course of action.</p>
+                            <p class="reference">SOP 4.1.2 Diversion Decision</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>In-flight you are predicting to be below DDP fuel requirements. What are the conditions for continuing to destination & do you need to maintain critical ETP fuel?</h5>
+                            <p>Should it become apparent at any time prior to the DDP that the MIN DDP FUEL will not be available at the DDP, the PIC may elect to continue to the destination based on assessment of the following:</p>
+                            <ul>
+                                <li>-	Actual and forecast destination and destination alternate weather for the expected ETA. (suitable closer alternates can be considered)</li>
+                                <li>-	Fuel predictions based upon updated winds, updated flight plan and expected approach at destination</li>
+                                <li>-	The ability to divert to the destination alternate from top of descent or at a lower level (thereby gaining fuel, see fuel savings by not descending)</li>
+                                <li>-	Maintain awareness of critical fuel including any mitigation available to reduce fuel requirements</li>
+                                <li>-	Preservation of minimum fixed fuel reserve</li>
+                            </ul>
+                            <p>If, after considering all available information, the PIC is NOT satisfied that a safe landing with the required reserves is assured, then the aircraft should be diverted to the en-route refuelling airfield.</p>
+                            <p class="reference">RG1 FPL.29</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Cruise Questions ENDS -->
+
+            <!-- Arrival Questions BEGINS -->
+            <div class="tab-pane fade" id="arrival" role="tabpanel" aria-labelledby="arrival-tab">
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>Does the 1000’/5km circling minima apply to both destination and alternate? </h5>
+                            <p>Yes</p>
+                            <p class="reference">RG 1 OPS.28 Aerodrome Meteorological Minima</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>Circling approach when can you descent below MDA? </h5>
+                            <p>When visual reference has been established at or above the minima, the PIC of an aircraft executing a circling approach shall not descend below MDA until visually intercepting the final landing approach profile.</p>
+                            <p class="reference">RG 1 OPS.27 Visual Approach (NZ)</p>
+                            <p>Circling Approaches must not be flown below published MDA or 1000ft AAL unless at the discretion of the PIC, provided that:</p>
+                            <ul>
+                                <li>Visual reference can be maintained throughout the circling approach, and</li>
+                                <li>The landing threshold or approach lights or other markings identifiable with the approach end of the runway are visible, and</li>
+                                <li>The aircraft can make a continuous descent to land using normal rates of descent and normal manoeuvres</li>
+                            </ul>
+                            <p class="reference">SOP 3.7.3 Circling Approach</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>On an ILS approach ATC reports below landing minima, can you continue the approach? </h5>
+                            <p>Yes, if you have commenced the final approach segment. Alternatively, if the visibility is fluctuating about the minimum and a good chance exists that the conditions will be above minimum when the aircraft reaches DA/MDA you may commence the approach.</p>
+                            <p class="reference">RG 1 OPS.25 Instrument Approach Requirements</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What is the standard call for one dot of LOC or VOR deviation on approach?</h5>
+                            <p>LOC ¼ dot on LOC approach and COURSE when ½ dot on VOR approach</p>
+                            <p>“LOC, UNSTABLE” or “COURSE, UNSTABLE”??? (Not found specified in any manual)</p>
+                            <p class="reference">FCOM-PRO-NOR-SOP-Standard Callouts</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>Correct unstable call?</h5>
+                            <p>If a deviation exists at or below the stable approach gate the PM shall make a relevant deviation call followed by the word “unstable” eg “Speed, unstable” or “Sink rate, unstable.</p>
+                            <p class="reference">SOP 2.8.2 Approach Deviation Calls</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>You forget to set QNH of 1003 during an RNAV approach, will you be high or low? </h5>
+                            <p>Hi-lo-hi – The altimeter is set high and the QNH is lower, the altimeter reads high. Meaning it is over-reading and you are LOWER than you think.</p>
+                            <p>Lo-hi-lo – vice versa.</p>
+                            <p class="reference"></p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>What is the Approach Integrity Check (AIC)?</h5>
+                            <p>Approach Integrity Check consists of the following:</p>
+                            <ul>
+                                <li>The procedure must be in the database</li>
+                                <li>Lateral track within +/- 1˚</li>
+                                <li>Angle must be correct within +/- 0.07˚</li>
+                                <li>Vertical FMGS heights must be at or above the charted crossing altitudes. Also the lowest coded altitude after the FAF must be equal or lower than DA/MDA</li>
+                                <li>Monitor Raw data when available</li>
+                            </ul>
+                            <p class="reference">RG1 NAV.APP.3</p>
+                            <p class="important">If the AIC fails then you cannot use final app for guidance.</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>What is are Instrument approach hierarchy? </h5>
+                            <p>When an instrument approach is required, the crew should apply the following order of preference to the category appropriate to the conditions:</p>
+                            <ol>
+                                <li>GLS</li>
+                                <li>RNAV (APV) or ILS (APV = Approach with lateral and vertical guidance, but not a precision approach)</li>
+                                <li>RNAV (NPA) (NPA = non-precision approach which utilises lateral but not vertical guidance)</li>
+                                <li>NPAs in the following order:
+                                    <ol>
+                                        <li>LOC/DME</li>
+                                        <li>LOC or LDA</li>
+                                        <li>VOR/DME</li>
+                                        <li>VOR</li>
+                                        <li>NDB/DME</li>
+                                        <li>NDB</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                            <p>RNAV (RNP) AR approaches must be validated by the Air New Zealand navigation services validation process. (ie: not by pilots carrying out an AIC)</p>
+                            <p class="reference">SOP 3.7.1 Approach Procedures Policy</p>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(0,0,0, 0.8);">
+                    <div class="col" id="question">
+                        <h5>In an emergency evacuation after an unprepared landing, what can you expect the FA to be prepared to do?</h5>
+                            <p>Crew Co-ordination General matrix states:</p>
+                            <ul>
+                                <li>Quick/Prepared Emergency Landing – cabin crew should be prepared to act as required after landing. This could include an evacuation.</li>
+                            </ul>
+                            <p class="reference">CSM 4.5.1 Crew Co-ordination General</p>
+                            <p>Flight attendant initiated evacuation (if cabin crew have identified the lives of the passengers/crew are in immediate danger).</p>
+                            <ul>
+                                <li>All effort should be made in the first instance to contact the flight deck via interphone. This will ensure the engines are shut down and the aircraft is stopped
+                                    <ul>
+                                        <li>In extreme circumstances and if contact with the flight deck is not possible, be prepared to act without instruction from the flight crew.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p class="reference">CSM 4.14.1 Evacuation Objective</p>
+                    </div>
+                </div>
+        
+                <div class="row" style="background-color: rgba(0,0,0, 0.6);">
+                    <div class="col" id="question">
+                        <h5>Actions in the event of cabin not ready on landing? </h5>
+                            <p>If cabin clearance is not received by flight crew at the appropriate time before landing, they will make a PA announcement “Flight attendants must now be seated for landing”.</p>
+                            <p class="reference">CSM 2.9.1 Cabin Standard Operating Procedures</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Arrival Questions ENDS -->
+          </div>
+
+<!-- Bootstraps example ends -->
+
+        <footer>
+            <h6>&copy;Pablo Sanchez</h6>
+        </footer>
+
+    </div>
+</body>
+</html>
